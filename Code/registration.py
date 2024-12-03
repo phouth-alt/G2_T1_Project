@@ -1,6 +1,5 @@
 import re
 import hashlib
-import json
 class Register:
     def __init__(self,username, password, phone):
         self.username = username

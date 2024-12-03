@@ -7,4 +7,9 @@ class Login:
         self.encrypted_password = hashlib.sha256(password.encode()).hexdigest()
         return self.encrypted_password
     def check_password(self):
-        if self.encrypt_password == 
+        with open("data.txt", "r") as file:
+            if self.encrypt_password == file.readlines():
+                return True
+            else:
+                return False
+            
