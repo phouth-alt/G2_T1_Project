@@ -1,5 +1,6 @@
 import re
 import hashlib
+import json
 class Register:
     def __init__(self,username, password, phone):
         self.username = username
@@ -36,6 +37,13 @@ class Register:
             
         if flag == -1: 
             print("Not a Valid Password")
+    def save_to_file(self):
+        data_dict = {}
+        data_dict[self.username] = self.__password
+        print("Data secure : ",data_dict)
+        with open("data.txt", "a") as file:
+            for key, value in data_dict.items():
+                file.write('%s : %s\n' % (key, value))
     def display_details(self):
         print(f"Username: {self.username}")
         print(f"Phone: {self.__phone}")
@@ -44,3 +52,4 @@ password = "R@m@_f0rtu9e$"
 user1 = Register("phanphouth",password ,85976899776)
 user1.pass_strength(password)
 user1.display_details()
+user1.save_to_file()
