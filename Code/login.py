@@ -4,12 +4,25 @@ class Login:
         self.username = username
         self.__password = self.encrypt_password(password)
     def encrypt_password(self, password):
-        self.encrypted_password = hashlib.sha256(password.encode()).hexdigest()
-        return self.encrypted_password
+        return hashlib.sha256(password.encode()).hexdigest()
     def check_password(self):
-        with open("data.txt", "r") as file:
-            if self.encrypt_password == file.readlines():
-                return True
-            else:
-                return False
+        try:
+            with open("data.txt", "r") as file:
+                stored_data = f"{self.username} : {self.__password}"
+                for line in file:
+                    if line.strip() == stored_data:
+                        print("Login Successful")
+                        return True
+                    else:
+                        print("Login Unsuccessful")
+                        return False
+        except FileNotFoundError:
+            print("Error file is not found.")
+            return False
+        except IOError:
+            print("An error occurred while reading the file.")
+            return False
+account_login = Login("phanphouth", "R@m@_f0rtu9e$")
+account_login.check_password()
+        
             
