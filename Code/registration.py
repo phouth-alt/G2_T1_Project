@@ -60,3 +60,4 @@ user1.pass_strength(password)
 user1.display_details()
 user1.save_to_file()
 print("User already exist : {}".format(user1.check_user()))
+

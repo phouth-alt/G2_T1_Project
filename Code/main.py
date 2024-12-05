@@ -1,19 +1,20 @@
 class AuthenticationSystem:
     def __init__(self,username,password,phone):
-        self.username = username
-        self.__password = password
-        self.__phone = phone
+        self.username = username #phone number follow format +855976899776
+        self.__password = password #password hash and store in dictionary after format to file
+        self.__phone = phone #where we should store this one
     def Options(self):
         print("============================================")
         print("===========Authentication System============")
         print("============================================")
-        print("1.Registration")
-        print("2.Login")
+        print("1.Login")
+        print("2.Register")
         print("3.Reset Password")
         print("4.ForgetPassword")
         print("5.Exit program")
         print("============================================")
-        input_options = input("Enter an option:")
+        print("=============Enter an option================")
+        input_options = input("")
         while True:
             if input_options == '1':
                 print("Didn't have action yet")
