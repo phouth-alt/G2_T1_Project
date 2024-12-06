@@ -7,4 +7,4 @@ class ResetPass:
         return hashlib.sha256(password.encode()).hexdigest()
     def resetpass(self):
         with open("data.txt", 'r') as file:
-            
+            pass
