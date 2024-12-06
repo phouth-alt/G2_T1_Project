@@ -11,6 +11,7 @@ class Register:
     def check_user(self):
         with open("data.txt", 'r') as file:
             read_data = file.readlines()
+            print(read_data)
             if read_data == self.__phone:
                 return True
             else:
