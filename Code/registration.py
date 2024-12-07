@@ -45,11 +45,13 @@ class Register:
             print("Not a Valid Password")
     def save_to_file(self):
         data_dict = {}
-        data_dict[self.username] = self.__password
+        data_dict[self.username] = {self.__phone : self.__password}
         print("Data secure : ",data_dict)
         with open("data.txt", "a") as file:
-            for key, value in data_dict.items():
-                file.write('%s : %s\n' % (key, value))
+            for keys, values in data_dict.items():
+                file.write('%s' %(keys))
+                for key, value in values.items():
+                    file.write('%s %s\n' %(key, value))
     def display_details(self):
         print(f"Username: {self.username}")
         print(f"Phone: {self.__phone}")
