@@ -50,7 +50,7 @@ class Register:
         with open("data.txt", "a") as file:
             for keys, values in data_dict.items():
                 for key, value in values.items():
-                    file.write('%s\t\t%s\t\t%s\n' %(keys, key, value))
+                    file.write('%s\t%s\t%s\n' %(keys, key, value))
     def display_details(self):
         print(f"Username: {self.username}")
         print(f"Phone: {self.__phone}")

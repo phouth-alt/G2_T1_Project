@@ -1,23 +1,23 @@
 import re
-def pass_strength(self):
+def pass_strength(password):
     flag = 0
     while True:
-        if(len(self.__password) < 8):
+        if(len(password) <= 8):
             flag = -1
             break
-        elif not re.search("[a-z]", self.__password):
+        elif not re.search("[a-z]",password):
             flag = -1
             break
-        elif not re.search("[A-Z]", self.__password):
+        elif not re.search("[A-Z]",password):
             flag = -1
             break
-        elif not re.search("[0-9]", self.__password):
+        elif not re.search("[0-9]",password):
             flag = -1
             break
-        elif not re.search("[!@#$%^&*()]", self.__password):
+        elif not re.search("[!@#$%^&*()]",password):
             flag = -1
             break
-        elif re.search("\s", self.__password):
+        elif re.search("\s",password):
             flag = -1
             break
         else:
@@ -27,3 +27,5 @@ def pass_strength(self):
         
     if flag == -1: 
         print("Not a Valid Password")
+
+pass_strength("UareMYfarVoritH00@")
