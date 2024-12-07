@@ -48,9 +48,9 @@ class Register:
         data_dict[self.username] = {self.__phone : self.__password}
         print("Data secure : ",data_dict)
         with open("data.txt", "a") as file:
-            for keys, values in data_dict.items():
-                file.write('%s' %(keys))
-                for key, value in values.items():
+            for key, value in data_dict.items():
+                file.write('%s' %(key))
+                for key, value in value.items():
                     file.write('%s %s\n' %(key, value))
     def display_details(self):
         print(f"Username: {self.username}")
