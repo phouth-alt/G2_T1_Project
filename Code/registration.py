@@ -48,16 +48,15 @@ class Register:
         data_dict[self.username] = {self.__phone : self.__password}
         print("Data secure : ",data_dict)
         with open("data.txt", "a") as file:
-            for key, value in data_dict.items():
-                file.write('%s' %(key))
-                for key, value in value.items():
-                    file.write('%s %s\n' %(key, value))
+            for keys, values in data_dict.items():
+                for key, value in values.items():
+                    file.write('%s\t\t%s\t\t%s\n' %(keys, key, value))
     def display_details(self):
         print(f"Username: {self.username}")
         print(f"Phone: {self.__phone}")
         print(f"Encrypted Password: {self.__password}")
 password = "R@m@_f0rtu9e$"
-user1 = Register("Rathanak_cam",password ,85976899776)
+user1 = Register("Rathanak_cam",password ,85939849383)
 user1.pass_strength(password)
 user1.display_details()
 user1.save_to_file()
