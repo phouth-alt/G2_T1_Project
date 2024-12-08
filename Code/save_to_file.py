@@ -1,7 +1,7 @@
 from encrypt_pass import encrypt_password
 def save_to_file(username,password,phone):
         try:
-            encrypt_password(password)
+            password = encrypt_password(password)
             data_dict = {}
             data_dict[username] = {phone : password}
             file_path = "D:\G2_T1_Project\Data\data.txt"
