@@ -20,8 +20,6 @@ def check_user(username,password):
           with open(file_path, 'r') as file:
                for line in file:
                     parts = line.strip().split("\t\t")
-                    print(parts[0])
-                    print(parts[2])
                     if len(parts) > 2:
                          if parts[0].strip() == username and parts[2].strip() == en_password:
                               return True
