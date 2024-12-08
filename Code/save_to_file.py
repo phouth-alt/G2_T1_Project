@@ -1,8 +1,5 @@
 
 def save_to_file(username,password,phone):
-        if not username or not password or not phone:
-             print("Error : All fields (username, password, phone) are required.")
-             return
         try:
             data_dict = {}
             data_dict[username] = {phone : password}
@@ -18,3 +15,4 @@ def save_to_file(username,password,phone):
              print("Execution of Save to file completed.")
 
 
+save_to_file("phan Phouth","UareMYfarVoritH00@",+855976899776)
