@@ -7,7 +7,7 @@ def register(username,password,phone):
         print("Error : All fields (username, password, phone) are required.")
         return
     if check_username(phone) == True:
-        print("your alread have an account.")
+        print("your alread have an account. please login")
         return
     if not pass_strength(password):
         return

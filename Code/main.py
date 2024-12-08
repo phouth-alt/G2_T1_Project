@@ -1,8 +1,5 @@
+from registration import register
 class AuthenticationSystem:
-    def __init__(self,username,password,phone):
-        self.username = username #phone number follow format +855976899776
-        self.__password = password #password hash and store in dictionary after format to file
-        self.__phone = phone #where we should store this one
     def Options(self):
         while True:
             print("============================================")
@@ -21,7 +18,7 @@ class AuthenticationSystem:
                 print("Didn't have action yet")
                 print("\n")
             elif input_options == '2':
-                print("Didn't have action yet")
+                register()
                 print("\n")
 
             elif input_options == '3':
