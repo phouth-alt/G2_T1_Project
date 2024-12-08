@@ -13,6 +13,3 @@ def save_to_file(username,password,phone):
              print("File error: {}".format(e))
         finally:
              print("Execution of Save to file completed.")
-
-
-save_to_file("phan Phouth","UareMYfarVoritH00@",+855976899776)
