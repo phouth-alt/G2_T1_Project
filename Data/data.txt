@@ -1,8 +1,1 @@
-phan phouth		+855976899776		iloveyou
-chn		'kks		kd
-phanphouth		ks		lls
-Phan phouth		+855976899776		iloveyou
-cd "d:\G2_T1_Project\Code"		cd "d:\G2_T1_Project\Code"		python -u "d:\G2_T1_Project\Code\check_username.py"
-cd "d:\G2_T1_Project\Code"		cd "d:\G2_T1_Project\Code"		python -u "d:\G2_T1_Project\Code\registration.py"
-cd "d:\G2_T1_Project\Code"		cd "d:\G2_T1_Project\Code"		python -u "d:\G2_T1_Project\Code\registration.py"
-phan phouth		jdjs		lsjdjd
+
