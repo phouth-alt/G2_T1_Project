@@ -17,8 +17,5 @@ def save_to_file(username,password,phone):
              print("File error: {}".format(e))
         finally:
              print("Execution of Save to file completed.")
-username = input("Full Name: ")
-password = input("Enter Pasword: ")
-phone = input("phone number: ")
-save_to_file(username,password,phone)
+
 

@@ -14,4 +14,3 @@ def check_user(phone):
      finally:
           print("operation completed.")
 
-print(check_user("+855976899776"))
