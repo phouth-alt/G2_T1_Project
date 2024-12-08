@@ -8,3 +8,4 @@ class ResetPass:
     def resetpass(self):
         with open("data.txt", 'r') as file:
             pass
+
