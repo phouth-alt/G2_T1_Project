@@ -16,7 +16,6 @@ def check_username(phone):
 def check_user(username,password):
      try:
           en_password = encrypt_password(password)
-          print(en_password)
           file_path = "D:\G2_T1_Project\Data\data.txt"
           with open(file_path, 'r') as file:
                for line in file:
@@ -29,5 +28,3 @@ def check_user(username,password):
           return False
      except FileNotFoundError:
         print("Error: File not found at {}".format(file_path))
-
-print(check_user("Phan Phouth","UareMYfarVoritH00@"))
