@@ -12,32 +12,22 @@ def check_username(phone):
           return False
      except FileNotFoundError:
         print("Error: File not found at {}".format(file_path))
+     
+def check_user(username,password):
+     try:
+          en_password = encrypt_password(password)
+          print(en_password)
+          file_path = "D:\G2_T1_Project\Data\data.txt"
+          with open(file_path, 'r') as file:
+               for line in file:
+                    parts = line.strip().split("\t\t")
+                    print(parts[0])
+                    print(parts[2])
+                    if len(parts) > 2:
+                         if parts[0].strip() == username and parts[2].strip() == en_password:
+                              return True
+          return False
+     except FileNotFoundError:
+        print("Error: File not found at {}".format(file_path))
 
-def check_user(username, password):
-    try:
-        # Encrypt the password for comparison
-        encrypted_password = encrypt_password(password)
-        
-        # Use a raw string for the file path
-        file_path = r"D:\G2_T1_Project\Data\data.txt"
-        
-        # Open and read the file
-        with open(file_path, 'r') as file:
-            for line in file:
-                parts = line.strip().split("\t\t")  # Use correct delimiter
-                if len(parts) > 2:  # Ensure the line has at least 3 parts
-                    if parts[0].strip() == username and parts[2].strip() == encrypted_password:
-                        return True  # Username and password match
-            
-        # If no match found
-        return False
-    
-    except FileNotFoundError:
-        print(f"Error: File not found at {file_path}")
-        return False
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return False
-
-# Example usage
-print(check_user("Phan Phouth", "UareMYfarVoritH00@"))
+print(check_user("Phan Phouth","UareMYfarVoritH00@"))
