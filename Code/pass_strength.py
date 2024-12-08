@@ -20,5 +20,6 @@ def pass_strength(password):
             return False
         else:
             print("Valid Password")
+            return True
 
         
