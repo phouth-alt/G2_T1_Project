@@ -18,11 +18,11 @@ class AuthenticationSystem:
                 print("\nLogin functionality is under development.\n")
                 print("\n")
             elif input_options == '2':
-                first_name = input("First name:")
-                last_name = input("Last name: ")
+                first_name = input("First name:").strip()
+                last_name = input("Last name: ").strip()
                 username = first_name + " " + last_name
-                password = input("Enter password:")
-                phone = input("phone number: ")
+                password = input("Enter password:").strip()
+                phone = input("phone number: ").strip()
                 register(username,password,phone)
                 print("\n")
 

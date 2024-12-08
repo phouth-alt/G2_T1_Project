@@ -1,7 +1,6 @@
 from check_username import check_username
 from pass_strength import pass_strength
 from save_to_file import save_to_file
-from encrypt_pass import encrypt_password
 def register(username,password,phone):
     if not username or not password or not phone:
         print("Error : All fields (username, password, phone) are required.")
