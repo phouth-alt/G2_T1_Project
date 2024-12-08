@@ -36,5 +36,5 @@ class AuthenticationSystem:
                 print("invalid option, please choose options again\n")
 
 
-user1 = AuthenticationSystem("phouth","iesls03",829372344)
+user1 = AuthenticationSystem()
 user1.Options()
