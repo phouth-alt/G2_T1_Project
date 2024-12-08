@@ -28,4 +28,4 @@ def check_user(username,password):
      except FileNotFoundError:
         print("Error: File not found at {}".format(file_path))
 
-print(check_user("phan phouth","UareMYfarVoritH00@"))
+print(check_user("Phan Phouth","UareMYfarVoritH00@"))
