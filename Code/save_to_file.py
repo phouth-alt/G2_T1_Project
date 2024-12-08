@@ -1,3 +1,4 @@
+
 from pathlib import Path
 def save_to_file(username,password,phone):
         if not username or not password or not phone:
@@ -6,8 +7,9 @@ def save_to_file(username,password,phone):
         try:
             data_dict = {}
             data_dict[username] = {phone : password}
+            file_path = "D:\G2_T1_Project\Data\data.txt"
             print("Secure Data : ",data_dict)
-            with open("file_to_open", "a") as file:
+            with open(file_path, "a") as file:
                 for username, details in data_dict.items():
                     for phone, password in details.items():
                         file.write('%s\t%s\t%s\n' %(username,phone, password))
