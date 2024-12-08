@@ -19,7 +19,6 @@ def pass_strength(password):
             print("Password Must not contain whitespace.")
             return False
         else:
-            print("Valid Password")
             return True
 
         
