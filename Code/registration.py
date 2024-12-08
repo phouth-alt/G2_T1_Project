@@ -4,6 +4,7 @@ from save_to_file import save_to_file
 from encrypt_pass import encrypt_password
 def register(username,password,phone):
     if check_username(phone):
+        print("your alread have an account.")
         return
     if not pass_strength(password):
         return

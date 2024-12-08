@@ -12,5 +12,5 @@ def check_username(phone):
      except FileNotFoundError:
         print("Error: File not found at {}".format(file_path))
      finally:
-          print("operation completed.")
+          print("check user operation completed.\n")
 
