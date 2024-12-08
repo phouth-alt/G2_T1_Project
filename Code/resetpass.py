@@ -6,10 +6,6 @@ def reset_pass(username,password):
         check_user(username,password)
     except:
         pass
-    if reset_pass(username,password):
-        pass
-    else:
-        pass
 
 if __name__ == "__main__":
     reset_pass("Phan Phouth","UareMYfarVoritH00@")
