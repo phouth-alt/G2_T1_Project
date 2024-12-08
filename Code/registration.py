@@ -12,9 +12,3 @@ def register(username,password,phone):
     if not pass_strength(password):
         return
     save_to_file(username,password,phone)
-first_name = input("First name:")
-last_name = input("Last name: ")
-username = first_name + " " + last_name
-password = input("Enter password:")
-phone = input("phone number: ")
-register(username,password,phone)

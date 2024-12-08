@@ -15,18 +15,23 @@ class AuthenticationSystem:
             print("--------------------------------------------")
             input_options = input("")
             if input_options == '1':
-                print("Didn't have action yet")
+                print("\nLogin functionality is under development.\n")
                 print("\n")
             elif input_options == '2':
-                register()
+                first_name = input("First name:")
+                last_name = input("Last name: ")
+                username = first_name + " " + last_name
+                password = input("Enter password:")
+                phone = input("phone number: ")
+                register(username,password,phone)
                 print("\n")
 
             elif input_options == '3':
-                print("Didn't have action yet")
+                print("\nLogin functionality is under development.\n")
                 print("\n")
 
             elif input_options == '4':
-                print("Didn't have action yet")
+                print("\nLogin functionality is under development.\n")
                 print("\n")
 
             elif input_options == '5':
@@ -36,5 +41,6 @@ class AuthenticationSystem:
                 print("invalid option, please choose options again\n")
 
 
-user1 = AuthenticationSystem()
-user1.Options()
+if __name__ == "__main__":
+    user1 = AuthenticationSystem()
+    user1.Options()
