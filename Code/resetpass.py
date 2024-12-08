@@ -7,5 +7,5 @@ def reset_pass(username,password):
     except:
         pass
 
-if __name__ == "__main__":
-    reset_pass("Phan Phouth","UareMYfarVoritH00@")
+
+reset_pass("Phan Phouth","UareMYfarVoritH00@")
