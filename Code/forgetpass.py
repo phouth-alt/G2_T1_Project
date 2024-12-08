@@ -1,1 +1,0 @@
-def forget_pass(phone):
