@@ -1,3 +1,4 @@
+from pathlib import Path
 def save_to_file(username,password,phone):
         if not username or not password or not phone:
              print("Error : All fields are required.")
@@ -6,10 +7,10 @@ def save_to_file(username,password,phone):
             data_dict = {}
             data_dict[username] = {phone : password}
             print("Secure Data : ",data_dict)
-            with open("test.txt", "a") as file:
+            with open("file_to_open", "a") as file:
                 for username, details in data_dict.items():
                     for phone, password in details.items():
-                        file.write('%s\t\t%s\t\t%s\n' %(username,phone, password))
+                        file.write('%s\t%s\t%s\n' %(username,phone, password))
             print("Save to file completed successfully.")
         except IOError as e: 
              print("File error: {}".format(e))

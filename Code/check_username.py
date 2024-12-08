@@ -1,5 +1,5 @@
 def check_user(phones):
-        with open("data.txt", 'r') as file:
+        with open("", 'r') as file:
            for line in file:
                 parts = line.strip().split("\t")
                 parts = [part for part in parts if part]
