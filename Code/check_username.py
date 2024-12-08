@@ -20,11 +20,10 @@ def check_user(username,password):
           with open(file_path, 'r') as file:
                for line in file:
                     parts = line.strip().split("\t\t")
-                    if len(parts) > 1:
+                    if len(parts) > 2:
                          if parts[0].strip() == username and parts[2] == password:
                               return True
-               else:
-                    return False
+          return False
      except FileNotFoundError:
         print("Error: File not found at {}".format(file_path))
 
