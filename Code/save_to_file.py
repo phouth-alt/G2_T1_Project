@@ -7,7 +7,6 @@ def save_to_file(username,password,phone):
             data_dict = {}
             data_dict[username] = {phone : password}
             file_path = "D:\G2_T1_Project\Data\data.txt"
-            print("Secure Data : ",data_dict)
             with open(file_path, "a") as file:
                 for username, details in data_dict.items():
                     for phone, password in details.items():
