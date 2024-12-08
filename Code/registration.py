@@ -11,7 +11,6 @@ def register(username,password,phone):
         return
     if not pass_strength(password):
         return
-    encrypt_password(password)
     save_to_file(username,password,phone)
 
 username = input("Enter your full name:")
