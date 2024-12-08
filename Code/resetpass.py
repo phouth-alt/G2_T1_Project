@@ -3,9 +3,13 @@ from check_username import check_user
 
 def reset_pass(username,password):
     try:
-        check_user(username,password)
+        print(check_user(username,password))
     except:
         pass
+    if check_user(username,password):
+        password = input("New password: ")
+    else:
+        print("try again")
 
 
 reset_pass("Phan Phouth","UareMYfarVoritH00@")
