@@ -7,7 +7,8 @@ class Login:
         return hashlib.sha256(password.encode()).hexdigest()
     def check_password(self):
         try:
-            with open("data.txt", "r") as file:
+            file_path = "D:\G2_T1_Project\Data\data.txt"
+            with open(file_path, "r") as file:
                 stored_data = f"{self.username} : {self.__password}"
                 for line in file:
                     if line.strip() == stored_data:

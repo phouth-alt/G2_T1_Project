@@ -9,7 +9,7 @@ def reset_pass(username,password):
     if check_user(username,password):
         password = input("New password: ")
     else:
-        print("try again")
+        print("Please try again")
 
 
 reset_pass("Phan Phouth","UareMYfarVoritH00@")
