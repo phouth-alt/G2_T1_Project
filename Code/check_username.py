@@ -1,4 +1,4 @@
-def check_user(phone):
+def check_username(phone):
      try:
           file_path = "D:\G2_T1_Project\Data\data.txt"
           phone = str(phone)

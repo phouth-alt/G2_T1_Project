@@ -3,6 +3,7 @@ import pass_strength
 import save_to_file
 import encrypt_pass
 def register(username,password,phone):
+    check_username(phone)
     if check_username(phone):
         return
     if not pass_strength(password):
