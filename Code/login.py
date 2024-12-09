@@ -13,7 +13,6 @@ def create_user(username, password):
 
 def login(username, password):
     if check_password(username, password):
-        print("Login successfully")
         return True
     else:
         print("Invalid username or password. Please try again.")
