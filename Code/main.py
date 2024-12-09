@@ -1,4 +1,5 @@
 from registration import register
+from check_username import check_password
 class AuthenticationSystem:
     def Options(self):
         while True:
@@ -15,7 +16,7 @@ class AuthenticationSystem:
             print("--------------------------------------------")
             input_options = input("")
             if input_options == '1':
-                print("\nLogin functionality is under development.\n")
+                check_password(username,password)
                 print("\n")
             elif input_options == '2':
                 first_name = input("First name:").strip()
