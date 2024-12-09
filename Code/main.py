@@ -1,6 +1,7 @@
 from registration import register
 from check_username import check_password
 from resetpass import reset_pass
+from login import login
 class AuthenticationSystem:
     def Options(self):
         while True:
@@ -19,7 +20,7 @@ class AuthenticationSystem:
             if input_options == '1':
                 username = input("Username: ").strip()
                 password = input("Enter password:").strip()
-                if check_password(username,password):
+                if login(username,password):
                     print("Login successfully")
                 else:
                     print("Login agian")
