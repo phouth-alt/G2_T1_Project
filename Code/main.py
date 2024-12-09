@@ -1,5 +1,4 @@
 from registration import register
-from check_username import check_password
 from resetpass import reset_pass
 from login import login
 class AuthenticationSystem:
