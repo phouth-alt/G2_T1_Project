@@ -1,5 +1,6 @@
 from encrypt_pass import encrypt_password
 from check_username import check_user
+from pass_strength import pass_strength
 
 def reset_pass(username,password):
     try:
@@ -7,6 +8,9 @@ def reset_pass(username,password):
         en_password = encrypt_password(password)
         if check_user(username,password):
             password = input("New password: ")
+            pass_strength(password)
+            if not pass_strength(password):
+                return
             password = encrypt_password(password)
         else:
             print("Please try again")
@@ -16,9 +20,7 @@ def reset_pass(username,password):
             for line in file:
                 parts = line.strip().split("\t\t")
                 if len(parts) > 2:
-                    if parts[0].strip() == username.strip() and parts[2].strip() == en_password.strip():
-                        
-                    
+                    pass
     except:
         pass
     
