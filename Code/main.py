@@ -1,41 +1,46 @@
+from registration import register
 class AuthenticationSystem:
-    def __init__(self,username,password,phone):
-        self.username = username #phone number follow format +855976899776
-        self.__password = password #password hash and store in dictionary after format to file
-        self.__phone = phone #where we should store this one
     def Options(self):
-        print("============================================")
-        print("===========Authentication System============")
-        print("============================================")
-        print("1.Login")
-        print("2.Register")
-        print("3.Reset Password")
-        print("4.ForgetPassword")
-        print("5.Exit program")
-        print("============================================")
-        print("=============Enter an option================")
-        input_options = input("")
         while True:
+            print("--------------------------------------------")
+            print("-----------Authentication System------------")
+            print("--------------------------------------------")
+            print("1.Login")
+            print("2.Register")
+            print("3.Reset Password")
+            print("4.ForgetPassword")
+            print("5.Exit program")
+            print("--------------------------------------------")
+            print("-------------Enter an option----------------")
+            print("--------------------------------------------")
+            input_options = input("")
             if input_options == '1':
-                print("Didn't have action yet")
-                break
+                print("\nLogin functionality is under development.\n")
+                print("\n")
             elif input_options == '2':
-                print("Didn't have action yet")
-                break
+                first_name = input("First name:").strip()
+                last_name = input("Last name: ").strip()
+                username = first_name + " " + last_name
+                password = input("Enter password:").strip()
+                phone = input("phone number: ").strip()
+                register(username,password,phone)
+                print("\n")
+
             elif input_options == '3':
-                print("Didn't have action yet")
-                break
+                print("\nLogin functionality is under development.\n")
+                print("\n")
+
             elif input_options == '4':
-                print("Didn't have action yet")
-                break
+                print("\nLogin functionality is under development.\n")
+                print("\n")
+
             elif input_options == '5':
-                print("Exiting program...")
+                print("Exiting program successfuly")
                 break
             else:
-                print("invalid option, please choose options again")
-                break
+                print("invalid option, please choose options again\n")
 
 
-
-user1 = AuthenticationSystem("phouth","iesls03",829372344)
-user1.Options()
+if __name__ == "__main__":
+    user1 = AuthenticationSystem()
+    user1.Options()

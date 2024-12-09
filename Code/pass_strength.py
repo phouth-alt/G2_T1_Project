@@ -1,29 +1,24 @@
 import re
-def pass_strength(self):
-    flag = 0
-    while True:
-        if(len(self.__password) < 8):
-            flag = -1
-            break
-        elif not re.search("[a-z]", self.__password):
-            flag = -1
-            break
-        elif not re.search("[A-Z]", self.__password):
-            flag = -1
-            break
-        elif not re.search("[0-9]", self.__password):
-            flag = -1
-            break
-        elif not re.search("[!@#$%^&*()]", self.__password):
-            flag = -1
-            break
-        elif re.search("\s", self.__password):
-            flag = -1
-            break
+def pass_strength(password):
+        if(len(password) <= 8):
+            print("Password Must be longer than 8 characters.")
+            return False
+        elif not re.search("[a-z]",password):
+            print("Password Must contain at least one lowercase letter.")
+            return False
+        elif not re.search("[A-Z]",password):
+            print("Password Must contain at least one uppercase letter.")
+            return False
+        elif not re.search("[0-9]",password):
+            print("Password Must contain at least on digit.")
+            return False
+        elif not re.search("[!@#$%^&*()]",password):
+            print("Password Must contain at least one special character(!@#$%^&*()).")
+            return False
+        elif re.search("\s",password):
+            print("Password Must not contain whitespace.")
+            return False
         else:
-            flag = 0
-            print("Valid Password")
-            break
+            return True
+
         
-    if flag == -1: 
-        print("Not a Valid Password")
