@@ -20,7 +20,8 @@ def reset_pass(username,password):
             for line in file:
                 parts = line.strip().split("\t\t")
                 if len(parts) > 2:
-                    pass
+                    with open(file_path, 'w') as file:
+                        parts[2] = file.write(password)
     except:
         pass
     

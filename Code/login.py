@@ -1,19 +1,15 @@
-import hashlib
-class Login:
-    def __init__(self,username, password):
-        self.username = username
-        self.__password = self.encrypt_password(password)
-    def encrypt_password(self, password):
-        return hashlib.sha256(password.encode()).hexdigest()
-    def check_password(self):
+from encrypt_pass import encrypt_password
+def login(username,password):
         try:
             file_path = "D:\G2_T1_Project\Data\data.txt"
+            en_password = encrypt_password(password)
             with open(file_path, "r") as file:
-                stored_data = f"{self.username} : {self.__password}"
                 for line in file:
-                    if line.strip() == stored_data:
-                        print("Login Successful")
-                        return True
+                    parts = line.strip().split("\t\t")
+                    if len(parts) > 1:
+                        if parts[0] == username and parts[2] == en_password:
+                              print("Login Successful")
+                              return True
                     else:
                         print("Login Unsuccessful")
                         return False
@@ -23,8 +19,5 @@ class Login:
         except IOError:
             print("An error occurred while reading the file.")
             return False
-account_login = Login("phanphouth", "R@m@_f0rtu9e$")
-account_login.check_password()
-
         
             
