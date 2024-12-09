@@ -1,7 +1,7 @@
 from encrypt_pass import encrypt_password
 def check_username(phone):
      try:
-          file_path = "D:\G2_T1_Project\Data\data.txt"
+          file_path = "data.txt"
           phone = str(phone)
           with open(file_path, 'r') as file:
                for line in file:
@@ -16,7 +16,7 @@ def check_username(phone):
 def check_user(username,password):
      try:
           en_password = encrypt_password(password)
-          file_path = "D:\G2_T1_Project\Data\data.txt"
+          file_path = "data.txt"
           with open(file_path, 'r') as file:
                for line in file:
                     parts = line.strip().split("\t\t")
@@ -29,7 +29,7 @@ def check_user(username,password):
 
 def check_password(username,password):
           try:
-               file_path = "D:\G2_T1_Project\Data\data.txt"
+               file_path = "data.txt"
                en_password = encrypt_password(password)
                with open(file_path, "r") as file:
                     for line in file:

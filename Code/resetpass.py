@@ -15,7 +15,7 @@ def reset_pass(username,password):
         else:
             print("Please try again")
             return
-        file_path = "D:\G2_T1_Project\Data\data.txt"
+        file_path = "data.txt"
         with open(file_path, 'r') as file:
             for line in file:
                 parts = line.strip().split("\t\t")

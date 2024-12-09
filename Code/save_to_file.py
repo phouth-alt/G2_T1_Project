@@ -4,7 +4,7 @@ def save_to_file(username,password,phone):
             password = encrypt_password(password)
             data_dict = {}
             data_dict[username] = {phone : password}
-            file_path = "D:\G2_T1_Project\Data\data.txt"
+            file_path = "data.txt"
             with open(file_path, "a") as file:
                 for username, details in data_dict.items():
                     for phone, password in details.items():
