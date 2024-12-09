@@ -1,5 +1,6 @@
 from registration import register
 from check_username import check_password
+from resetpass import reset_pass
 class AuthenticationSystem:
     def Options(self):
         while True:
@@ -33,7 +34,9 @@ class AuthenticationSystem:
                 print("\n")
 
             elif input_options == '3':
-                print("\nLogin functionality is under development.\n")
+                username = input("Enter username: ")
+                password = input("Enter password: ")
+                reset_pass(username,password)
                 print("\n")
 
             elif input_options == '4':
